@@ -1,0 +1,2 @@
+rootProject.name = "Temtempedia"
+include ':app'
