@@ -1,34 +1,4 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@iStaack 
-github
-/
-gitignore
-Public
-3.2k
-124k
-69.3k
-Code
-Pull requests
-324
-Actions
-Security
-Insights
-gitignore/Android.gitignore
-@Abdulrahman-AlGhamdi
-Abdulrahman-AlGhamdi Add .idea/jarRepositories.xml to Android.gitignore
-…
-Latest commit 25d6008 on 7 Jun
- History
- 49 contributors
-@shiftkey@arcresu@tral@Neargye@friederbluemle@callingshotgun@Abdulrahman-AlGhamdi@nicholas-gs@jsoref@malhobayyeb@ntakouris@Yousha
-89 lines (71 sloc)  1.46 KB
-   
+
 # Built application files
 *.apk
 *.aar
