@@ -1,4 +1,45 @@
 <resources>
     <string name="app_name">TemtemPedia</string>
-<!--    <string name="default_web_client_id">465354418596-inu015daaapmtj1t7tdv7tdgrhjq30q0.apps.googleusercontent.com</string>-->
+    <string name="title_activity_temtem_info">TemtemInfo</string>
+    <string name="tmp_temtem_name">
+        Raican
+    </string>
+    <string name="tmp_temtem_number">
+        59
+    </string>
+    <string name="banner_alt_1">
+        Imagen del temtem
+    </string>
+    <string name="banner_alt_2">
+        Imagen del temtem luma
+    </string>
+    <string name="banner_alt_3">
+        Ícono del temtem
+    </string>
+    <string name="temtem_dato_1">
+        Ratio captura
+    </string>
+    <string name="temtem_dato_2">
+        Sexo
+    </string>
+    <string name="temtem_dato_3">
+        Minutos eclosión
+    </string>
+    <string name="temtem_dato_4">
+        Tipos
+    </string>
+    <string name="temtem_dato_5">
+        Ratio captura
+    </string>
+    <string name="temtem_dato_6">
+        Stats
+    </string>
+    <string name="temtem_dato_7">
+        Fortalezas/Debilidades
+    </string>
+    <string name="temtem_dato_8">
+        Rasgos
+    </string>
+    <string name="action_settings">Settings</string>
+    <!--    <string name="default_web_client_id">465354418596-inu015daaapmtj1t7tdv7tdgrhjq30q0.apps.googleusercontent.com</string>-->
 </resources>
