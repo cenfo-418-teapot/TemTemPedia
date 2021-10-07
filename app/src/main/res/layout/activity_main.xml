@@ -1,24 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/logout"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:text="Logout"
-        android:textSize="40sp"
-        android:padding="10dp"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:textColor="@android:color/holo_orange_light"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="4dp"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_margin="8dp"
+        tools:ignore="MissingClass">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flex1"
+            android:layout_width="500dp"
+            android:layout_height="100dp"
+            app:alignContent="flex_start"
+            app:alignItems="flex_start"
+            app:flexDirection="row"
+            app:flexWrap="nowrap">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/tt_3_1"
+                android:scaleType="centerCrop"
+                android:contentDescription="Temtem card image test"
+                />
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                app:flexDirection="column"
+                app:justifyContent="center"
+                app:alignItems="center"
+                app:flexWrap="nowrap">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="Temtem name test"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Subtitle text test"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    />
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Temtem card image test"
+                    />
+            </com.google.android.flexbox.FlexboxLayout>
+        </com.google.android.flexbox.FlexboxLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
