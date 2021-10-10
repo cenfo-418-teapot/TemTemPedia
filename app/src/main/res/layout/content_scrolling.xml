@@ -132,24 +132,25 @@
 
                     <TextView
                         android:id="@+id/textView6"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/temtem_dato_4" />
 
                     <LinearLayout
                         android:id="@+id/Lista_tipos"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/imageView"
+                            android:id="@+id/foto_tipo_1"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             app:srcCompat="@mipmap/tipo_agua_foreground" />
 
                         <ImageView
-                            android:id="@+id/imageView6"
+                            android:id="@+id/foto_tipo_2"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             app:srcCompat="@mipmap/tipo_agua_foreground" />
@@ -193,12 +194,40 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/textView19"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="@string/temtem_dato_7" />
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/temtem_dato_7" />
+
+                        <LinearLayout
+                            android:id="@+id/Lista_debilidades"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/tipo_1"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@mipmap/tipo_agua_foreground" />
+
+                            <ImageView
+                                android:id="@+id/tipo_2"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@mipmap/tipo_agua_foreground" />
+
+                        </LinearLayout>
+                    </LinearLayout>
 
                 </TableRow>
 
@@ -209,7 +238,7 @@
                     <TextView
                         android:id="@+id/textView21"
                         android:layout_width="0dp"
-                        android:layout_height="2dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/temtem_dato_8" />
 
