@@ -2,8 +2,7 @@ package com.teapot.temtempedia
 
 import android.animation.ObjectAnimator
 import android.os.Bundle
-import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import android.widget.ProgressBar
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import com.teapot.temtempedia.databinding.ActivityTemtemInfoBinding
@@ -18,7 +17,7 @@ class TemtemInfo : AppCompatActivity() {
         binding = ActivityTemtemInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setUpStatsBar();
+        setUpStatsBar()
 
         setSupportActionBar(findViewById(R.id.toolbar))
         binding.toolbarLayout.title = title
@@ -29,10 +28,24 @@ class TemtemInfo : AppCompatActivity() {
     }
 
     private fun setUpStatsBar() {
-        progressBar.max = 100
-        val currentProgress = 50
+        val pgHP = findViewById<ProgressBar>(R.id.pg_HP)
+        val pgSTA = findViewById<ProgressBar>(R.id.pg_STA)
+        val pgSPE = findViewById<ProgressBar>(R.id.pg_SPE)
+        val pgATK = findViewById<ProgressBar>(R.id.pg_ATK)
+        val pgDEF = findViewById<ProgressBar>(R.id.pg_DEF)
+        val pgSPATK = findViewById<ProgressBar>(R.id.pg_SPATK)
+        val pgSPDEF = findViewById<ProgressBar>(R.id.pg_SPDEF)
+        setUpStatBar(pgHP, 77)
+        setUpStatBar(pgSTA, 49)
+        setUpStatBar(pgSPE, 60)
+        setUpStatBar(pgATK, 77)
+        setUpStatBar(pgDEF, 77)
+        setUpStatBar(pgSPATK, 51)
+        setUpStatBar(pgSPDEF, 50)
+    }
 
-        ObjectAnimator.ofInt(progressBar,"progress", currentProgress)
+    private fun setUpStatBar(bar: ProgressBar, stat: Int) {
+        ObjectAnimator.ofInt(bar,"progress", stat)
             .setDuration(2000)
             .start()
     }
