@@ -1,5 +1,6 @@
 package com.teapot.temtempedia
 
+import android.animation.ObjectAnimator
 import android.os.Bundle
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -17,11 +18,22 @@ class TemtemInfo : AppCompatActivity() {
         binding = ActivityTemtemInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setUpStatsBar();
+
         setSupportActionBar(findViewById(R.id.toolbar))
         binding.toolbarLayout.title = title
         binding.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+    }
+
+    private fun setUpStatsBar() {
+        progressBar.max = 100
+        val currentProgress = 50
+
+        ObjectAnimator.ofInt(progressBar,"progress", currentProgress)
+            .setDuration(2000)
+            .start()
     }
 }

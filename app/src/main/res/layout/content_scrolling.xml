@@ -53,23 +53,20 @@
 
                     <ImageView
                         android:id="@+id/imageView4"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
-                        app:layout_constraintWidth_default="percent"
-                        app:layout_constraintWidth_percent=".50"
                         tools:srcCompat="@tools:sample/avatars" />
 
                     <ImageView
                         android:id="@+id/imageView3"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
-                        app:layout_constraintWidth_default="percent"
-                        app:layout_constraintWidth_percent=".50"
+                        android:layout_weight="1"
                         tools:srcCompat="@tools:sample/avatars" />
                 </TableRow>
 
@@ -196,13 +193,183 @@
                     android:layout_height="match_parent"
                     android:paddingBottom="20dp">
 
-                    <TextView
-                        android:id="@+id/textView17"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="@string/temtem_dato_6" />
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="0"
+                            android:text="@string/temtem_dato_6" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/label_HP"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="HP" />
+
+                                <ProgressBar
+                                    android:id="@+id/pg_HP"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="9"
+                                    android:max="100"
+                                    android:scaleY="4" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/label_STA"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="STA" />
+
+                                <ProgressBar
+                                    android:id="@+id/pg_STA"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="9"
+                                    android:max="100"
+                                    android:scaleY="4" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/label_SPE"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="SPE" />
+
+                                <ProgressBar
+                                    android:id="@+id/pg_SPE"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="9"
+                                    android:max="100"
+                                    android:scaleY="4" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/label_ATK"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="ATK" />
+
+                                <ProgressBar
+                                    android:id="@+id/pg_ATK"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="9"
+                                    android:max="100"
+                                    android:scaleY="4" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/label_DEF"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="DEF" />
+
+                                <ProgressBar
+                                    android:id="@+id/pg_DEF"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="9"
+                                    android:max="100"
+                                    android:scaleY="4" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/label_SPATK"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="SPATK" />
+
+                                <ProgressBar
+                                    android:id="@+id/pg_SPATK"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="9"
+                                    android:max="100"
+                                    android:scaleY="4" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/label_SPDEF"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="SPDEF" />
+
+                                <ProgressBar
+                                    android:id="@+id/pg_SPDEF"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="9"
+                                    android:max="100"
+                                    android:scaleY="4" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
 
                 </TableRow>
