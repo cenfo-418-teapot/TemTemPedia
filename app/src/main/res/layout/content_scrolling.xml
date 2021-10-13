@@ -52,22 +52,22 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imageView4"
+                        android:id="@+id/imagen_normal"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        tools:srcCompat="@drawable/Raican_Normal_59" />
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/imagen_luma"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        tools:srcCompat="@drawable/Raican_Luma_59" />
                 </TableRow>
 
                 <TableRow

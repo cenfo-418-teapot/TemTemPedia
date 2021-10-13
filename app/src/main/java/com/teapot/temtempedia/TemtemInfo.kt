@@ -2,6 +2,7 @@ package com.teapot.temtempedia
 
 import android.animation.ObjectAnimator
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.ProgressBar
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +19,7 @@ class TemtemInfo : AppCompatActivity() {
         setContentView(binding.root)
 
         setUpStatsBar()
-
+        findViewById<ImageView>(R.id.imagen_normal).setImageResource(R.drawable.Zeraora)
         setSupportActionBar(findViewById(R.id.toolbar))
         binding.toolbarLayout.title = title
         binding.fab.setOnClickListener { view ->
