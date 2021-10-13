@@ -225,6 +225,13 @@
                                     android:layout_weight="1"
                                     android:text="HP" />
 
+                                <TextView
+                                    android:id="@+id/HP_stat"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="77" />
+
                                 <ProgressBar
                                     android:id="@+id/pg_HP"
                                     style="?android:attr/progressBarStyleHorizontal"
@@ -246,6 +253,13 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:text="STA" />
+
+                                <TextView
+                                    android:id="@+id/STA_stat"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="49" />
 
                                 <ProgressBar
                                     android:id="@+id/pg_STA"
@@ -269,6 +283,13 @@
                                     android:layout_weight="1"
                                     android:text="SPE" />
 
+                                <TextView
+                                    android:id="@+id/SPE_stat"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="60" />
+
                                 <ProgressBar
                                     android:id="@+id/pg_SPE"
                                     style="?android:attr/progressBarStyleHorizontal"
@@ -290,6 +311,13 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:text="ATK" />
+
+                                <TextView
+                                    android:id="@+id/ATK_stat"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="77" />
 
                                 <ProgressBar
                                     android:id="@+id/pg_ATK"
@@ -313,6 +341,13 @@
                                     android:layout_weight="1"
                                     android:text="DEF" />
 
+                                <TextView
+                                    android:id="@+id/DEF_stat"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="49" />
+
                                 <ProgressBar
                                     android:id="@+id/pg_DEF"
                                     style="?android:attr/progressBarStyleHorizontal"
@@ -335,6 +370,13 @@
                                     android:layout_weight="1"
                                     android:text="SPATK" />
 
+                                <TextView
+                                    android:id="@+id/SPATK_stat"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="51" />
+
                                 <ProgressBar
                                     android:id="@+id/pg_SPATK"
                                     style="?android:attr/progressBarStyleHorizontal"
@@ -356,6 +398,13 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:text="SPDEF" />
+
+                                <TextView
+                                    android:id="@+id/SPDEF_stat"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="50" />
 
                                 <ProgressBar
                                     android:id="@+id/pg_SPDEF"
