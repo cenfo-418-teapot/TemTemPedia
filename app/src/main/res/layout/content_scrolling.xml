@@ -156,13 +156,13 @@
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_marginEnd="10dp"
-                            app:srcCompat="@mipmap/tipo_agua_foreground" />
+                            app:srcCompat="@mipmap/tipo_fuego_foreground" />
 
                         <ImageView
                             android:id="@+id/foto_tipo_2"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            app:srcCompat="@mipmap/tipo_agua_foreground" />
+                            app:srcCompat="null" />
 
                     </LinearLayout>
 
@@ -460,7 +460,7 @@
                                     android:id="@+id/tipo_1"
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
-                                    app:srcCompat="@mipmap/tipo_agua_foreground" />
+                                    app:srcCompat="@mipmap/tipo_neutral_foreground" />
 
                                 <TextView
                                     android:id="@+id/resistencia_1"
@@ -481,7 +481,7 @@
                                     android:id="@+id/tipo_2"
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
-                                    app:srcCompat="@mipmap/tipo_agua_foreground" />
+                                    app:srcCompat="@mipmap/tipo_fuego_foreground" />
 
                                 <TextView
                                     android:id="@+id/resistencia_2"
@@ -523,7 +523,7 @@
                                     android:id="@+id/tipo_4"
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
-                                    app:srcCompat="@mipmap/tipo_agua_foreground" />
+                                    app:srcCompat="@mipmap/tipo_naturaleza_foreground" />
 
                                 <TextView
                                     android:id="@+id/resistencia_4"
@@ -544,7 +544,7 @@
                                     android:id="@+id/tipo_5"
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
-                                    app:srcCompat="@mipmap/tipo_agua_foreground" />
+                                    app:srcCompat="@mipmap/tipo_electrico_foreground" />
 
                                 <TextView
                                     android:id="@+id/resistencia_5"
@@ -565,7 +565,7 @@
                                     android:id="@+id/tipo_6"
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
-                                    app:srcCompat="@mipmap/tipo_agua_foreground" />
+                                    app:srcCompat="@mipmap/tipo_roca_foreground" />
 
                                 <TextView
                                     android:id="@+id/resistencia_6"
@@ -595,7 +595,7 @@
                                     android:id="@+id/tipo_7"
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
-                                    app:srcCompat="@mipmap/tipo_agua_foreground" />
+                                    app:srcCompat="@mipmap/tipo_mental_foreground" />
 
                                 <TextView
                                     android:id="@+id/resistencia_7"
@@ -616,7 +616,7 @@
                                     android:id="@+id/tipo_8"
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
-                                    app:srcCompat="@mipmap/tipo_agua_foreground" />
+                                    app:srcCompat="@mipmap/tipo_viento_foreground" />
 
                                 <TextView
                                     android:id="@+id/resistencia_8"
@@ -637,7 +637,7 @@
                                     android:id="@+id/tipo_9"
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
-                                    app:srcCompat="@mipmap/tipo_agua_foreground" />
+                                    app:srcCompat="@mipmap/tipo_digital_foreground" />
 
                                 <TextView
                                     android:id="@+id/resistencia_9"
@@ -658,7 +658,7 @@
                                     android:id="@+id/tipo_10"
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
-                                    app:srcCompat="@mipmap/tipo_agua_foreground" />
+                                    app:srcCompat="@mipmap/tipo_melee_foreground" />
 
                                 <TextView
                                     android:id="@+id/resistencia_10"
@@ -679,7 +679,7 @@
                                     android:id="@+id/tipo_11"
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
-                                    app:srcCompat="@mipmap/tipo_agua_foreground" />
+                                    app:srcCompat="@mipmap/tipo_cristal_foreground" />
 
                                 <TextView
                                     android:id="@+id/resistencia_11"
@@ -700,7 +700,7 @@
                                     android:id="@+id/tipo_12"
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
-                                    app:srcCompat="@mipmap/tipo_agua_foreground" />
+                                    app:srcCompat="@mipmap/tipo_toxico_foreground" />
 
                                 <TextView
                                     android:id="@+id/resistencia_12"
