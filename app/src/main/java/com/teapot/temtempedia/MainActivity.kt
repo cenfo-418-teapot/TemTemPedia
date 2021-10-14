@@ -9,6 +9,15 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import kotlin.collections.ArrayList
+import kotlin.random.Random
+
+data class Team(
+    val user_id: String? = null,
+    val temtem_ids: List<Int>? = null,
+)
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestIdToken(getString(R.string.web_client_id))
             .requestEmail()
             .build()
         mGoogleSignInClient= GoogleSignIn.getClient(this,gso)
@@ -38,5 +47,23 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        findViewById<Button>(R.id.newTeam).setOnClickListener {
+            val max = 100;
+            val min = 1
+            val randIds = IntArray(5){ (min..max).random()}.asList();
+            saveTeam(randIds);
+        }
+    }
+
+    fun saveTeam(teamMembers: List<Int>) {
+        val db = Firebase.firestore
+        db.collection("teams")
+            .add( Team( auth.uid, teamMembers ) )
+            .addOnSuccessListener { documentReference ->
+                Toast.makeText(applicationContext, "Team saved to ${auth.currentUser?.email}", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(applicationContext, "There was an internet issue, try again", Toast.LENGTH_SHORT).show()
+            }
     }
 }

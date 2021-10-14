@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">TemtemPedia</string>
-<!--    <string name="default_web_client_id">465354418596-inu015daaapmtj1t7tdv7tdgrhjq30q0.apps.googleusercontent.com</string>-->
+    <string name="web_client_id">465354418596-inu015daaapmtj1t7tdv7tdgrhjq30q0.apps.googleusercontent.com</string>
 </resources>
