@@ -32,6 +32,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/titulo_temem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#403F51B5"
@@ -76,14 +77,15 @@
                     android:paddingBottom="20dp">
 
                     <TextView
-                        android:id="@+id/textView2"
+                        android:id="@+id/label_ratio_captura"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/temtem_dato_1" />
+                        android:text="@string/temtem_dato_1"
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/ratio_captura"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -97,14 +99,16 @@
                     android:paddingBottom="20dp">
 
                     <TextView
-                        android:id="@+id/textView9"
+                        android:id="@+id/label_porcentajes_sexo"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/temtem_dato_2" />
+                        android:text="@string/temtem_dato_2"
+                        android:textAlignment="viewStart"
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textView10"
+                        android:id="@+id/porcentaje_sexo"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -118,14 +122,16 @@
                     android:paddingBottom="20dp">
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/label_minutos_eclosion"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/temtem_dato_3" />
+                        android:text="@string/temtem_dato_3"
+                        android:textAlignment="viewStart"
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textView12"
+                        android:id="@+id/minutos_eclosion"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -138,11 +144,13 @@
                     android:paddingBottom="20dp">
 
                     <TextView
-                        android:id="@+id/textView6"
+                        android:id="@+id/label_tipos"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/temtem_dato_4" />
+                        android:text="@string/temtem_dato_4"
+                        android:textAlignment="viewStart"
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:id="@+id/Lista_tipos"
@@ -156,36 +164,22 @@
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_marginEnd="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:scaleX="2"
+                            android:scaleY="2"
                             app:srcCompat="@mipmap/tipo_fuego_foreground" />
 
                         <ImageView
                             android:id="@+id/foto_tipo_2"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            app:srcCompat="null" />
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:scaleX="2" />
 
                     </LinearLayout>
 
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingBottom="20dp">
-
-                    <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/temtem_dato_5" />
-
-                    <TextView
-                        android:id="@+id/textView18"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Contenido" />
                 </TableRow>
 
                 <TableRow
@@ -205,7 +199,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="20dp"
                             android:layout_weight="0"
-                            android:text="@string/temtem_dato_6" />
+                            android:text="@string/temtem_dato_6"
+                            android:textAlignment="viewStart"
+                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -217,6 +213,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/vida" />
 
                                 <TextView
                                     android:id="@+id/label_HP"
@@ -247,6 +250,13 @@
                                 android:layout_height="20dp"
                                 android:orientation="horizontal">
 
+                                <ImageView
+                                    android:id="@+id/imageView2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/stamina" />
+
                                 <TextView
                                     android:id="@+id/label_STA"
                                     android:layout_width="20dp"
@@ -275,6 +285,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/velocidad" />
 
                                 <TextView
                                     android:id="@+id/label_SPE"
@@ -305,6 +322,13 @@
                                 android:layout_height="20dp"
                                 android:orientation="horizontal">
 
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/ataque" />
+
                                 <TextView
                                     android:id="@+id/label_ATK"
                                     android:layout_width="20dp"
@@ -333,6 +357,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/defensa" />
 
                                 <TextView
                                     android:id="@+id/label_DEF"
@@ -363,6 +394,13 @@
                                 android:layout_height="20dp"
                                 android:orientation="horizontal">
 
+                                <ImageView
+                                    android:id="@+id/imageView6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/ataque_especial" />
+
                                 <TextView
                                     android:id="@+id/label_SPATK"
                                     android:layout_width="20dp"
@@ -391,6 +429,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView7"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/defensa_especial" />
 
                                 <TextView
                                     android:id="@+id/label_SPDEF"
@@ -440,12 +485,14 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="20dp"
                             android:layout_weight="1"
-                            android:text="@string/temtem_dato_7" />
+                            android:text="@string/temtem_dato_7"
+                            android:textAlignment="viewStart"
+                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:id="@+id/Lista_debilidades_1"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:orientation="horizontal">
 
@@ -459,7 +506,11 @@
                                 <ImageView
                                     android:id="@+id/tipo_1"
                                     android:layout_width="match_parent"
-                                    android:layout_height="20dp"
+                                    android:layout_height="25dp"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:scaleX="2"
+                                    android:scaleY="2"
                                     app:srcCompat="@mipmap/tipo_neutral_foreground" />
 
                                 <TextView
@@ -480,7 +531,11 @@
                                 <ImageView
                                     android:id="@+id/tipo_2"
                                     android:layout_width="match_parent"
-                                    android:layout_height="20dp"
+                                    android:layout_height="25dp"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:scaleX="2"
+                                    android:scaleY="2"
                                     app:srcCompat="@mipmap/tipo_fuego_foreground" />
 
                                 <TextView
@@ -501,7 +556,11 @@
                                 <ImageView
                                     android:id="@+id/tipo_3"
                                     android:layout_width="match_parent"
-                                    android:layout_height="20dp"
+                                    android:layout_height="25dp"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:scaleX="2"
+                                    android:scaleY="2"
                                     app:srcCompat="@mipmap/tipo_agua_foreground" />
 
                                 <TextView
@@ -522,7 +581,11 @@
                                 <ImageView
                                     android:id="@+id/tipo_4"
                                     android:layout_width="match_parent"
-                                    android:layout_height="20dp"
+                                    android:layout_height="25dp"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:scaleX="2"
+                                    android:scaleY="2"
                                     app:srcCompat="@mipmap/tipo_naturaleza_foreground" />
 
                                 <TextView
@@ -543,7 +606,11 @@
                                 <ImageView
                                     android:id="@+id/tipo_5"
                                     android:layout_width="match_parent"
-                                    android:layout_height="20dp"
+                                    android:layout_height="25dp"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:scaleX="2"
+                                    android:scaleY="2"
                                     app:srcCompat="@mipmap/tipo_electrico_foreground" />
 
                                 <TextView
@@ -564,7 +631,11 @@
                                 <ImageView
                                     android:id="@+id/tipo_6"
                                     android:layout_width="match_parent"
-                                    android:layout_height="20dp"
+                                    android:layout_height="25dp"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:scaleX="2"
+                                    android:scaleY="2"
                                     app:srcCompat="@mipmap/tipo_roca_foreground" />
 
                                 <TextView
@@ -580,9 +651,10 @@
                         <LinearLayout
                             android:id="@+id/Lista_debilidades_2"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp">
 
                             <LinearLayout
                                 android:id="@+id/caja_debilidad_7"
@@ -594,7 +666,11 @@
                                 <ImageView
                                     android:id="@+id/tipo_7"
                                     android:layout_width="match_parent"
-                                    android:layout_height="20dp"
+                                    android:layout_height="25dp"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:scaleX="2"
+                                    android:scaleY="2"
                                     app:srcCompat="@mipmap/tipo_mental_foreground" />
 
                                 <TextView
@@ -615,7 +691,11 @@
                                 <ImageView
                                     android:id="@+id/tipo_8"
                                     android:layout_width="match_parent"
-                                    android:layout_height="20dp"
+                                    android:layout_height="25dp"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:scaleX="2"
+                                    android:scaleY="2"
                                     app:srcCompat="@mipmap/tipo_viento_foreground" />
 
                                 <TextView
@@ -636,7 +716,11 @@
                                 <ImageView
                                     android:id="@+id/tipo_9"
                                     android:layout_width="match_parent"
-                                    android:layout_height="20dp"
+                                    android:layout_height="25dp"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:scaleX="2"
+                                    android:scaleY="2"
                                     app:srcCompat="@mipmap/tipo_digital_foreground" />
 
                                 <TextView
@@ -657,7 +741,11 @@
                                 <ImageView
                                     android:id="@+id/tipo_10"
                                     android:layout_width="match_parent"
-                                    android:layout_height="20dp"
+                                    android:layout_height="25dp"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:scaleX="2"
+                                    android:scaleY="2"
                                     app:srcCompat="@mipmap/tipo_melee_foreground" />
 
                                 <TextView
@@ -678,7 +766,11 @@
                                 <ImageView
                                     android:id="@+id/tipo_11"
                                     android:layout_width="match_parent"
-                                    android:layout_height="20dp"
+                                    android:layout_height="25dp"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:scaleX="2"
+                                    android:scaleY="2"
                                     app:srcCompat="@mipmap/tipo_cristal_foreground" />
 
                                 <TextView
@@ -699,7 +791,11 @@
                                 <ImageView
                                     android:id="@+id/tipo_12"
                                     android:layout_width="match_parent"
-                                    android:layout_height="20dp"
+                                    android:layout_height="25dp"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:scaleX="2"
+                                    android:scaleY="2"
                                     app:srcCompat="@mipmap/tipo_toxico_foreground" />
 
                                 <TextView
@@ -731,7 +827,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="20dp"
-                            android:text="@string/temtem_dato_8" />
+                            android:text="@string/temtem_dato_8"
+                            android:textAlignment="viewStart"
+                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
