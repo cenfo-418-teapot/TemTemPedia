@@ -37,5 +37,16 @@ class MainActivity : AppCompatActivity() {
                 finish()
             }
         }
+
+        // Run tem tem info preview (Isaac Feature)
+        findViewById<Button>(R.id.temtemInfo).setOnClickListener {
+            val intent = Intent(this, TemtemInfo::class.java)
+            val infoEmpaquetada = Bundle()
+            infoEmpaquetada.putInt("temtem", 3) //Your id
+            intent.putExtras(infoEmpaquetada) //Put your id to your next Intent
+            startActivity(intent)
+            finish()
+        }
+
     }
 }
