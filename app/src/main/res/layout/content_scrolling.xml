@@ -176,7 +176,8 @@
                             android:layout_height="20dp"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:scaleX="2" />
+                            android:scaleX="2"
+                            android:scaleY="2" />
 
                     </LinearLayout>
 
