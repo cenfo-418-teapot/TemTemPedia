@@ -3,6 +3,7 @@ package com.teapot.temtempedia
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -46,6 +47,10 @@ class MainActivity : AppCompatActivity() {
             intent.putExtras(infoEmpaquetada) //Put your id to your next Intent
             startActivity(intent)
             finish()
+        }
+
+        fun showDetail(view: View) {
+            Toast.makeText(this, "Show the detail MF!", Toast.LENGTH_SHORT).show()
         }
 
     }
