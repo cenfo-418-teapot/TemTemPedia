@@ -1,0 +1,382 @@
+[
+    {
+        "id": 59,
+        "nombre": "Raican",
+        "ratioCaptura": 90,
+        "porcentajeM": 0.85,
+        "porcentajeF": 0.15,
+        "minutosEclosion": 15,
+        "fotoNormal": "raican_normal_59",
+        "fotoLuma": "raican_luma_59",
+        "tipos": ["fuego"],
+        "stats": {
+            "ps":77,
+            "sta":49,
+            "spd":60,
+            "atk":77,
+            "def":77,
+            "spatk":51,
+            "spdef":50
+        },
+        "fortalezas": {
+            "neutral": 1,
+            "fuego":0.5,
+            "agua":2,
+            "naturaleza":0.5,
+            "electricidad":1,
+            "roca":0.5,
+            "mental":1,
+            "viento":1,
+            "digital":1,
+            "melee":1,
+            "cristal":0.5,
+            "tóxico":1
+        },
+        "rasgos": [
+            "Motivador: Al comienzo de la gira, los Aliados Temtem recuperan el 10% de su STA.",
+            "Orgulloso: Otorga 3 puntos de ATQ y SPATK, así como vigor cuando este Temtem vence a otro."
+        ]
+    },
+    {
+        "id": 12,
+        "nombre": "Tateru",
+        "ratioCaptura": 165,
+        "porcentajeM": 0.60,
+        "porcentajeF": 0.40,
+        "minutosEclosion": 12,
+        "fotoNormal": "tateru_normal_12",
+        "fotoLuma": "tateru_luma_12",
+        "tipos": ["neutral"],
+        "stats": {
+            "ps":79,
+            "sta":85,
+            "spd":60,
+            "atk":78,
+            "def":66,
+            "spatk":54,
+            "spdef":66
+        },
+        "fortalezas": {
+            "neutral": 1,
+            "fuego":1,
+            "agua":1,
+            "naturaleza":1,
+            "electricidad":1,
+            "roca":1,
+            "mental":2,
+            "viento":1,
+            "digital":1,
+            "melee":1,
+            "cristal":1,
+            "tóxico":1
+        },
+        "rasgos": [
+            "Toque suave: Cuando atacas Sommeil a un objetivo con el Estado durmiente, no se despierta y recibe un 20% más de daño.",
+            "Resiliente: El Temtem no se noqueará si se agota, cancela la ronda de penalización y otorga vigor. Solo funciona una vez por pelea."
+        ]
+    },
+    {
+        "id": 9,
+        "nombre": "Platimous",
+        "ratioCaptura": 0,
+        "porcentajeM": 0.50,
+        "porcentajeF": 0.50,
+        "minutosEclosion": 20,
+        "fotoNormal": "platimous_normal_9",
+        "fotoLuma": "platimous_luma_9",
+        "tipos": ["agua","tóxico"],
+        "stats": {
+            "ps":73,
+            "sta":49,
+            "spd":82,
+            "atk":56,
+            "def":39,
+            "spatk":93,
+            "spdef":70
+        },
+        "fortalezas": {
+            "neutral": 1,
+            "fuego":0.5,
+            "agua":0.33,
+            "naturaleza":1,
+            "electricidad":2,
+            "roca":0.5,
+            "mental":2,
+            "viento":2,
+            "digital":1,
+            "melee":1,
+            "cristal":1,
+            "tóxico":1
+        },
+        "rasgos": [
+            "Zen: Al obtener el estado de sueño, sube la defensa y defensa especial.",
+            "Determinado: Previene cambios estadísticos negativos."
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "Zaobian",
+        "ratioCaptura": 0,
+        "porcentajeM": 0.25,
+        "porcentajeF": 0.75,
+        "minutosEclosion": 16,
+        "fotoNormal": "zaobian_normal_3",
+        "fotoLuma": "zaobian_luma_3",
+        "tipos": ["digital"],
+        "stats": {
+            "ps":72,
+            "sta":90,
+            "spd":51,
+            "atk":84,
+            "def":50,
+            "spatk":42,
+            "spdef":44
+        },
+        "fortalezas": {
+            "neutral": 1,
+            "fuego":1,
+            "agua":2,
+            "naturaleza":1,
+            "electricidad":2,
+            "roca":1,
+            "mental":1,
+            "viento":1,
+            "digital":2,
+            "melee":1,
+            "cristal":1,
+            "tóxico":0.5
+        },
+        "rasgos": [
+            "Atacante <T>: El atacante <T>modifica el segundo tipo de Temtem por el tipo de técnica que utilizará.",
+            "Carga de voltios: Inflige un 10% de daño al atacante si utiliza una técnica de objetivo único contra el Temtem."
+        ]
+    },
+    {
+        "id": 34,
+        "nombre": "Nagaise",
+        "ratioCaptura": 0,
+        "porcentajeM": 0.50,
+        "porcentajeF": 0.50,
+        "minutosEclosion": 29,
+        "fotoNormal": "nagaise_normal_34",
+        "fotoLuma": "nagaise_luma_34",
+        "tipos": ["agua","mental"],
+        "stats": {
+            "ps":47,
+            "sta":52,
+            "spd":81,
+            "atk":49,
+            "def":55,
+            "spatk":92,
+            "spdef":76
+        },
+        "fortalezas": {
+            "neutral": 0.5,
+            "fuego":0.5,
+            "agua":0.5,
+            "naturaleza":2,
+            "electricidad":4,
+            "roca":0.5,
+            "mental":1,
+            "viento":1,
+            "digital":2,
+            "melee":0.5,
+            "cristal":2,
+            "tóxico":2
+        },
+        "rasgos": [
+            "Engaño: Las primeras 4 rondas cuando el Temtem entre en el campo de batalla, el orden de prioridad de las Técnicas se invertirá. Solo funciona una vez por pelea.",
+            "Presa: Las Aguatécnicas de agua dirigidas al aliado se redirigirán a este Temtem."
+        ]
+    },
+    {
+        "id": 50,
+        "nombre": "Valash",
+        "ratioCaptura": 95,
+        "porcentajeM": 0.50,
+        "porcentajeF": 0.50,
+        "minutosEclosion": 26,
+        "fotoNormal": "valash_normal_59",
+        "fotoLuma": "valash_luma_50",
+        "tipos": ["cristal"],
+        "stats": {
+            "ps":58,
+            "sta":57,
+            "spd":90,
+            "atk":74,
+            "def":56,
+            "spatk":74,
+            "spdef":56
+        },
+        "fortalezas": {
+            "neutral": 1,
+            "fuego":2,
+            "agua":1,
+            "naturaleza":1,
+            "electricidad":0.5,
+            "roca":2,
+            "mental":1,
+            "viento":1,
+            "digital":1,
+            "melee":2,
+            "cristal":1,
+            "tóxico":0.5
+        },
+        "rasgos": [
+            "Carroñero: Restaura el 20% del PV máximo si se pone otro Temtem K.O.",
+            "Determino: Previene cambios estadísticos negativos."
+        ]
+    },
+    {
+        "id": 83,
+        "nombre": "Golzy",
+        "ratioCaptura": 0,
+        "porcentajeM": 0.70,
+        "porcentajeF": 0.30,
+        "minutosEclosion": 15,
+        "fotoNormal": "golzy_normal_83",
+        "fotoLuma": "golzy_luma_83",
+        "tipos": ["electricidad","melee"],
+        "stats": {
+            "ps":76,
+            "sta":78,
+            "spd":82,
+            "atk":84,
+            "def":49,
+            "spatk":40,
+            "spdef":48
+        },
+        "fortalezas": {
+            "neutral": 1,
+            "fuego":1,
+            "agua":1,
+            "naturaleza":1,
+            "electricidad":0.5,
+            "roca":2,
+            "mental":2,
+            "viento":0.5,
+            "digital":2,
+            "melee":0.5,
+            "cristal":2,
+            "tóxico":1
+        },
+        "rasgos": [
+            "Desactivador: Si el Temtem utiliza una Técnica Física contra su oponente, este último será indigente durante 3 vueltas.",
+            "Carga voltáica: Inflige un 10% de daño al atacante si utiliza una técnica de objetivo único contra el Temtem."
+        ]
+    },
+    {
+        "id": 95,
+        "nombre": "Zizare",
+        "ratioCaptura": 75,
+        "porcentajeM": 0.50,
+        "porcentajeF": 0.50,
+        "minutosEclosion": 30,
+        "fotoNormal": "zizare_normal_95",
+        "fotoLuma": "zizare_luma_95",
+        "tipos": ["roca"],
+        "stats": {
+            "ps":60,
+            "sta":75,
+            "spd":30,
+            "atk":90,
+            "def":95,
+            "spatk":40,
+            "spdef":62
+        },
+        "fortalezas": {
+            "neutral": 1,
+            "fuego":0.5,
+            "agua":2,
+            "naturaleza":2,
+            "electricidad":0.5,
+            "roca":1,
+            "mental":1,
+            "viento":1,
+            "digital":1,
+            "melee":2,
+            "cristal":0.5,
+            "tóxico":0.5
+        },
+        "rasgos": [
+            "Descansado: Aumenta el ATQ y el ATQSP en un 30% en las primeras 2 rondas cuando el Temtem está en combate..",
+            "Pararrayos: Todas Electricidadlas técnicas eléctricas dirigidas al aliado serán redirigidas a este Temtem."
+        ]
+    },
+    {
+        "id": 99,
+        "nombre": "Momo",
+        "ratioCaptura": 98,
+        "porcentajeM": 0.10,
+        "porcentajeF": 0.90,
+        "minutosEclosion": 25,
+        "fotoNormal": "momo_normal_99",
+        "fotoLuma": "momo_luma_99",
+        "tipos": ["neutral"],
+        "stats": {
+            "ps":75,
+            "sta":78,
+            "spd":89,
+            "atk":46,
+            "def":49,
+            "spatk":79,
+            "spdef":75
+        },
+        "fortalezas": {
+            "neutral": 1,
+            "fuego":1,
+            "agua":1,
+            "naturaleza":1,
+            "electricidad":1,
+            "roca":1,
+            "mental":2,
+            "viento":1,
+            "digital":1,
+            "melee":1,
+            "cristal":1,
+            "tóxico":1
+        },
+        "rasgos": [
+            "Maestro STAB: Aumenta en un 40% el daño infligido por Técnicas del mismo tipo que Temtem.",
+            "Polvo de tormenta de nieve: Cuando el Temtem llegue Glacé a la batalla por primera vez, inflige Iced a los oponentes y Glacé al aliado durante 3 turnos si aún no están Iced."
+        ]
+    },
+    {
+        "id": 18,
+        "nombre": "Granpah",
+        "ratioCaptura": 0,
+        "porcentajeM": 0.50,
+        "porcentajeF": 0.50,
+        "minutosEclosion": 7,
+        "fotoNormal": "granpah_normal_18",
+        "fotoLuma": "granpah_luma_18",
+        "tipos": ["viento"],
+        "stats": {
+            "ps":70,
+            "sta":39,
+            "spd":78,
+            "atk":55,
+            "def":61,
+            "spatk":76,
+            "spdef":66
+        },
+        "fortalezas": {
+            "neutral": 1,
+            "fuego":1,
+            "agua":1,
+            "naturaleza":1,
+            "electricidad":2,
+            "roca":0.5,
+            "mental":1,
+            "viento":2,
+            "digital":1,
+            "melee":1,
+            "cristal":1,
+            "tóxico":1
+        },
+        "rasgos": [
+            "Última carrera: Aumenta el daño de las Técnicas Temtem en un 30% si hay más enemigos que aliados en el campo de batalla.",
+            "Abusivo: Mientras los aliados sean más que los oponentes (contando a los aliados fuera del campo de batalla), las Técnicas infligen un 30% más de daño."
+        ]
+    }
+]

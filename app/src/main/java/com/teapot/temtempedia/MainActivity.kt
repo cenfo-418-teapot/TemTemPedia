@@ -47,6 +47,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // Run tem tem info preview (Isaac Feature)
+        findViewById<Button>(R.id.temtemInfo).setOnClickListener {
+            val intent = Intent(this, TemtemInfo::class.java)
+            val infoEmpaquetada = Bundle()
+            infoEmpaquetada.putInt("temtem", 3) //Your id
+            intent.putExtras(infoEmpaquetada) //Put your id to your next Intent
+            startActivity(intent)
+            finish()
+        
         findViewById<Button>(R.id.newTeam).setOnClickListener {
             val max = 100;
             val min = 1
@@ -65,5 +74,6 @@ class MainActivity : AppCompatActivity() {
             .addOnFailureListener { e ->
                 Toast.makeText(applicationContext, "There was an internet issue, try again", Toast.LENGTH_SHORT).show()
             }
+        }
     }
 }
