@@ -57,10 +57,10 @@ class TemtemInfo : AppCompatActivity() {
         findViewById<TextView>(R.id.ratio_captura).text = ratioCaptura
         findViewById<TextView>(R.id.minutos_eclosion).text = minutosEclosion
         findViewById<TextView>(R.id.porcentaje_sexo).text = porcentajeSexo
-        findViewById<ImageView>(R.id.imagen_normal).setImageResource(
-                resources.getIdentifier(imagenTipo1, "drawable",this.packageName))
-        findViewById<ImageView>(R.id.imagen_normal).setImageResource(
-                resources.getIdentifier(imagenTipo2, "drawable",this.packageName))
+        findViewById<ImageView>(R.id.foto_tipo_1).setImageResource(
+            resources.getIdentifier(imagenTipo1, "mipmap",this.packageName))
+        findViewById<ImageView>(R.id.foto_tipo_2).setImageResource(
+            resources.getIdentifier(imagenTipo2, "mipmap",this.packageName))
         findViewById<ImageView>(R.id.imagen_normal).setImageResource(
             resources.getIdentifier(imagenNormal, "drawable",this.packageName))
         findViewById<ImageView>(R.id.imagen_luma).setImageResource(
@@ -98,11 +98,23 @@ class TemtemInfo : AppCompatActivity() {
         val pgSPDEF = findViewById<ProgressBar>(R.id.pg_SPDEF)
         setUpStatBar(pgHP, stats.ps)
         setUpStatBar(pgSTA, stats.sta)
-        setUpStatBar(pgSPE, stats.def)
+        setUpStatBar(pgSPE, stats.spd)
         setUpStatBar(pgATK, stats.atk)
-        setUpStatBar(pgDEF, stats.spdef)
+        setUpStatBar(pgDEF, stats.def)
         setUpStatBar(pgSPATK, stats.spatk)
         setUpStatBar(pgSPDEF, stats.spdef)
+
+        setUpStatsNumbers()
+    }
+
+    private fun setUpStatsNumbers() {
+        findViewById<TextView>(R.id.HP_stat).text = stats.ps.toString()
+        findViewById<TextView>(R.id.STA_stat).text = stats.sta.toString()
+        findViewById<TextView>(R.id.SPE_stat).text = stats.spd.toString()
+        findViewById<TextView>(R.id.ATK_stat).text = stats.atk.toString()
+        findViewById<TextView>(R.id.DEF_stat).text = stats.def.toString()
+        findViewById<TextView>(R.id.SPATK_stat).text = stats.spatk.toString()
+        findViewById<TextView>(R.id.SPDEF_stat).text = stats.spdef.toString()
     }
 
     private fun setUpFortalezas() {
