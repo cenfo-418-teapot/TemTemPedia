@@ -4,7 +4,6 @@ import android.animation.ObjectAnimator
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.ProgressBar
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import com.teapot.temtempedia.databinding.ActivityTemtemInfoBinding
 import android.content.Context
@@ -13,6 +12,7 @@ import android.widget.TextView
 import java.io.IOException
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.teapot.temtempedia.models.Temtem
 
 class TemtemInfo : AppCompatActivity() {
 
