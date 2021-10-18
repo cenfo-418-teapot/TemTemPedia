@@ -1,4 +1,7 @@
-package com.teapot.temtempedia
+package com.teapot.temtempedia.models
+
+import com.teapot.temtempedia.Fortalezas
+import com.teapot.temtempedia.Stats
 
 data class Temtem(
     var id: Int,
