@@ -12,8 +12,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import kotlin.collections.ArrayList
-import kotlin.random.Random
 
 data class Team(
     val user_id: String? = null,
@@ -28,9 +26,24 @@ class MainActivity : AppCompatActivity() {
         FirebaseAuth.getInstance()
     }
 
+    fun createTeam(){
+
+        findViewById<Button>(R.id.createTeam).setOnClickListener{
+            val intent = Intent(this, SaveTeam::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        findViewById<Button>(R.id.createTeam).setOnClickListener{
+            val intent = Intent(this, TeamLocal::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.web_client_id))
@@ -65,6 +78,12 @@ class MainActivity : AppCompatActivity() {
             saveTeam(randIds);
         }
 
+        findViewById<Button>(R.id.createTeam).setOnClickListener{
+            val intent = Intent(this, SaveTeam::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }
 
     fun saveTeam(teamMembers: List<Int>) {
@@ -82,4 +101,6 @@ class MainActivity : AppCompatActivity() {
     fun showDetail(view: View) {
         Toast.makeText(this, "Show the detail MF!", Toast.LENGTH_SHORT).show()
     }
+
+
 }

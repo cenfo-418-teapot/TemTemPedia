@@ -40,6 +40,14 @@
             android:text="Tem Tem Info"
             android:textSize="16sp"/>
 
+        <Button
+            android:id="@+id/createTeam"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:text="Create Team"
+            android:textSize="16sp" />
+
     </LinearLayout>
 
     <LinearLayout

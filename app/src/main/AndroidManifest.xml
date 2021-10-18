@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TemtemPedia">
+
         <activity
             android:name=".SaveTeam"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".TemtemInfo"
             android:exported="true"
@@ -19,8 +20,7 @@
             android:theme="@style/Theme.TemtemPedia.NoActionBar" />
         <activity
             android:name=".LoginScreen"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
