@@ -1,19 +1,22 @@
 package com.teapot.temtempedia
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.common.reflect.TypeToken
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import kotlin.collections.ArrayList
-import kotlin.random.Random
+import com.google.gson.Gson
+import java.io.IOException
 
 data class Team(
     val user_id: String? = null,
@@ -23,6 +26,7 @@ data class Team(
 class MainActivity : AppCompatActivity() {
 
     lateinit var mGoogleSignInClient: GoogleSignInClient
+    private val fragmentManager = supportFragmentManager
 
     private val auth by lazy {
         FirebaseAuth.getInstance()
@@ -38,7 +42,6 @@ class MainActivity : AppCompatActivity() {
             .build()
         mGoogleSignInClient= GoogleSignIn.getClient(this,gso)
 
-
         findViewById<Button>(R.id.logout).setOnClickListener {
             mGoogleSignInClient.signOut().addOnCompleteListener {
                 val intent= Intent(this, LoginScreen::class.java)
@@ -48,16 +51,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Run tem tem info preview (Isaac Feature)
-        findViewById<Button>(R.id.temtemInfo).setOnClickListener {
-            val intent = Intent(this, TemtemInfo::class.java)
-            val infoEmpaquetada = Bundle()
-            infoEmpaquetada.putInt("temtem", 3) //Your id
-            intent.putExtras(infoEmpaquetada) //Put your id to your next Intent
-            startActivity(intent)
-            finish()
-        }
-
         findViewById<Button>(R.id.newTeam).setOnClickListener {
             val max = 100;
             val min = 1
@@ -65,9 +58,10 @@ class MainActivity : AppCompatActivity() {
             saveTeam(randIds);
         }
 
+        printTemtemList()
     }
 
-    fun saveTeam(teamMembers: List<Int>) {
+    private fun saveTeam(teamMembers: List<Int>) {
         val db = Firebase.firestore
         db.collection("teams")
             .add( Team( auth.uid, teamMembers ) )
@@ -79,7 +73,35 @@ class MainActivity : AppCompatActivity() {
             }
     }
 
-    fun showDetail(view: View) {
-        Toast.makeText(this, "Show the detail MF!", Toast.LENGTH_SHORT).show()
+    private fun getJsonDataFromAsset(context: Context, fileName: String): String? {
+        val jsonString: String
+
+        try {
+            jsonString = context.assets.open(fileName).bufferedReader().use { it.readText() }
+        } catch (ioException: IOException) {
+            ioException.printStackTrace()
+            return null
+        }
+
+        return jsonString
+    }
+
+    private fun printTemtemList() {
+        val jsonFileString = getJsonDataFromAsset(applicationContext, "TemtemSource.json")
+        val gson = Gson()
+        val listaTemtem = object : TypeToken<List<Temtem>>() {}.type
+        var temtem: List<Temtem> = gson.fromJson(jsonFileString, listaTemtem)
+
+        temtem.forEachIndexed { _, temp ->
+            var id: Int = temp.id
+            var name: String = temp.nombre
+            var thumb: String = temp.fotoNormal
+
+            var temtemFragmentInstance = TemtemListItemMainActivity.newInstance(id, name, thumb)
+            var transaction = fragmentManager.beginTransaction()
+            transaction.add(R.id.list_item_fragment_container, temtemFragmentInstance)
+            transaction.commit()
+        }
+
     }
 }
