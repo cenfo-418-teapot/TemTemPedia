@@ -18,12 +18,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<Button>(R.id.createTeam).setOnClickListener{
-            val intent = Intent(this, TeamLocal::class.java)
-            startActivity(intent)
-            finish()
-        }
-
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.web_client_id))
             .requestEmail()
@@ -55,11 +49,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        findViewById<Button>(R.id.createTeam).setOnClickListener{
-            val intent = Intent(this, SaveTeam::class.java)
-            startActivity(intent)
-            finish()
-        }
 
     }
 
