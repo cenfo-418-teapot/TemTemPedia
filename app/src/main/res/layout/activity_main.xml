@@ -23,10 +23,10 @@
             android:textSize="16sp"
             />
         <Button
-            android:id="@+id/newTeam"
+            android:id="@+id/viewTeams"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="Save New Team"
+            android:text="View Teams"
             android:textSize="16sp" />
     </LinearLayout>
     <!-- fragments container -->

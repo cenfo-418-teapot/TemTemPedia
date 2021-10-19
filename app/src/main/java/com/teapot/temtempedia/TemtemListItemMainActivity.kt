@@ -35,6 +35,7 @@ class TemtemListItemMainActivity : Fragment() {
         val fragmentName = view.findViewById(R.id.fragmentName) as TextView
         val fragmentThumb = view.findViewById(R.id.fragmentThumb) as ImageView
         view.setOnClickListener { view ->
+            Log.i("caca XXXXX", "$id")
             val intent= Intent(activity, TemtemInfo::class.java)
             val intentParams = Bundle()
             id?.let { intentParams.putInt("temtem", it) }
