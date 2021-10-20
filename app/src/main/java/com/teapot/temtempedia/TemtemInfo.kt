@@ -8,7 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.teapot.temtempedia.databinding.ActivityTemtemInfoBinding
 import android.content.Context
 import android.content.Intent
+import android.view.View
+import android.widget.Button
 import android.widget.TextView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.io.IOException
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -18,6 +21,8 @@ class TemtemInfo : AppCompatActivity() {
 
     private lateinit var binding: ActivityTemtemInfoBinding
     private var idTemem = 59
+    private var idTemtemAnterior = -1
+    private var idTemtemSiguiente = -1
     private lateinit var stats: Stats
     private var titulo = "#0 Temtem"
     private var imagenNormal = ""
@@ -48,6 +53,23 @@ class TemtemInfo : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
+        }
+        findViewById<FloatingActionButton>(R.id.action_next).setOnClickListener {
+            loadTemtem(idTemtemSiguiente)
+        }
+        if (idTemtemAnterior !== -1) {
+            findViewById<FloatingActionButton>(R.id.action_previous).setOnClickListener {
+                loadTemtem(idTemtemAnterior)
+            }
+        } else {
+            findViewById<FloatingActionButton>(R.id.action_previous).visibility = View.INVISIBLE
+        }
+        if (idTemtemSiguiente !== -1) {
+            findViewById<FloatingActionButton>(R.id.action_next).setOnClickListener {
+            loadTemtem(idTemtemSiguiente)
+            }
+        } else {
+            findViewById<FloatingActionButton>(R.id.action_next).visibility = View.INVISIBLE
         }
     }
 
@@ -143,11 +165,28 @@ class TemtemInfo : AppCompatActivity() {
         val gson = Gson()
         val listaTetmtem = object : TypeToken<List<Temtem>>() {}.type
         var temtem: List<Temtem> = gson.fromJson(jsonFileString, listaTetmtem)
+        var finishLoop = false
+        var temtemBuscado: Temtem? = null
         temtem.forEachIndexed { index, temp ->
-            if (temp.id == id)
-                return temp
+            if(finishLoop){
+                idTemtemSiguiente = temp.id
+                return temtemBuscado
+            }
+            if (temp.id == id) {
+                temtemBuscado = temp
+                finishLoop = true
+            }
+            else idTemtemAnterior = temp.id
         }
-        return null;
+        return temtemBuscado
+    }
+
+    private fun loadTemtem(id: Int) {
+        val intent= Intent(this, TemtemInfo::class.java)
+        val intentParams = Bundle()
+        id.let { intentParams.putInt("temtem", it) }
+        intent.putExtras(intentParams)
+        startActivity(intent)
     }
 
     private fun getJsonDataFromAsset(context: Context, fileName: String): String? {
