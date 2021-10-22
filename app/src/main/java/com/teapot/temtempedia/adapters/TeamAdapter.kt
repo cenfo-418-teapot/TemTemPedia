@@ -28,7 +28,7 @@ class TeamAdapter(options: FirestoreRecyclerOptions<Team>, val context: Context)
         holder.amount.text = model.temtemIds?.size.toString()
     }
 
-    private fun getTemtemNames(idList: List<Int>?): String{
+    private fun getTemtemNames(idList: MutableList<Int?>): String{
         if (idList == null || idList.isEmpty()){
             return "No temtems found"
         }

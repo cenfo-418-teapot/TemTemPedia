@@ -70,11 +70,13 @@ class MainActivity : AppCompatActivity() {
             var id: Int = temp.id
             var name: String = temp.nombre
             var thumb: String = temp.fotoNormal
+            var show  = false;
 
-            var temtemFragmentInstance = TemtemListItemMainActivity.newInstance(id, name, thumb)
+            var temtemFragmentInstance = TemtemListItemMainActivity.newInstance(id, name, thumb, show)
             var transaction = fragmentManager.beginTransaction()
             transaction.add(R.id.list_item_fragment_container, temtemFragmentInstance)
             transaction.commit()
+
         }
     }
 
