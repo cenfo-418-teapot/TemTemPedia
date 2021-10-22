@@ -23,6 +23,7 @@
             android:contentDescription="Temtem card image test"
             android:scaleType="centerCrop"
             android:src="@drawable/raican_normal_59" />
+
         <TextView
             android:id="@+id/fragmentName"
             android:layout_width="0dp"
@@ -31,5 +32,13 @@
             android:text="Temtem name test"
             android:textSize="20sp"
             android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkBoxTemtemMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CheckBox"
+            android:visibility="invisible" />
     </LinearLayout>
 </FrameLayout>
