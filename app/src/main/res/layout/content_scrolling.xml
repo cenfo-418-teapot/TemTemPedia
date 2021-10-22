@@ -5,6 +5,7 @@
     android:id="@+id/info_temtem"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="5dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".TemtemInfo"
     tools:showIn="@layout/activity_temtem_info">
@@ -69,6 +70,24 @@
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
                         tools:srcCompat="@drawable/Raican_Luma_59" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/titulo1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#403F51B5"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/temtem_dato_5"
+                        android:textAlignment="center"
+                        android:textStyle="normal" />
                 </TableRow>
 
                 <TableRow
@@ -195,14 +214,17 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView17"
+                            android:id="@+id/titulo2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="20dp"
                             android:layout_weight="0"
+                            android:background="#403F51B5"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:layout_marginBottom="10dp"
                             android:text="@string/temtem_dato_6"
-                            android:textAlignment="viewStart"
-                            android:textStyle="bold" />
+                            android:textAlignment="center"
+                            android:textStyle="normal" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -481,14 +503,17 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView19"
+                            android:id="@+id/titulo3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="20dp"
                             android:layout_weight="1"
+                            android:background="#403F51B5"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:layout_marginBottom="10dp"
                             android:text="@string/temtem_dato_7"
-                            android:textAlignment="viewStart"
-                            android:textStyle="bold" />
+                            android:textAlignment="center"
+                            android:textStyle="normal" />
 
                         <LinearLayout
                             android:id="@+id/Lista_debilidades_1"
@@ -824,13 +849,16 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView21"
+                            android:id="@+id/titulo4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="20dp"
+                            android:background="#403F51B5"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:layout_marginBottom="10dp"
                             android:text="@string/temtem_dato_8"
-                            android:textAlignment="viewStart"
-                            android:textStyle="bold" />
+                            android:textAlignment="center"
+                            android:textStyle="normal" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
